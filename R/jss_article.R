@@ -16,7 +16,7 @@ jss_article <- function() {
     paste0('\\begin{CodeChunk}\n', x, '\\end{CodeChunk}')
   }
   hook_input <- function(x, options) {
-    paste0(c('\\begin{CodeInput}\n', paste0('R/> ', x, collapse = "") , '\\end{CodeInput}', ''),
+    paste0(c('\\begin{CodeInput}\n',  x, '\\end{CodeInput}', ''),
       collapse = '\n')
   }
   hook_output <- function(x, options) {
