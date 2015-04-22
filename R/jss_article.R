@@ -7,7 +7,7 @@ jss_article <- function() {
   # Mostly copied from knitr::render_sweave
   base$knitr$opts_knit$out.format <- "sweave"
 
-  base$knitr$opts_chunk$prompt <- TRUE
+ # base$knitr$opts_chunk$prompt <- TRUE
   base$knitr$opts_chunk$comment <- NA
   base$knitr$opts_chunk$highlight <- FALSE
 
