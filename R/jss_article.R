@@ -13,10 +13,10 @@ jss_article <- function() {
 
   hook_chunk <- function(x, options) {
     if (knitr:::output_asis(x, options)) return(x)
-    paste0('\\begin{CodeChunk}\n R> ', x, '\\end{CodeChunk}')
+    paste0('\\begin{CodeChunk}\n', x, '\\end{CodeChunk}')
   }
   hook_input <- function(x, options) {
-    paste0(c('\\begin{CodeInput}', x, '\\end{CodeInput}', ''),
+    paste0(c('\\begin{CodeInput}\n  R> ', x, '\\end{CodeInput}', ''),
       collapse = '\n')
   }
   hook_output <- function(x, options) {
